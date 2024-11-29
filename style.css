@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+background: #003366; /* Gradient from dark purple to lighter purple */
+color: #fff; /* Change text color for better contrast */
+}
+
+/* Navbar */
+.header-container {
+display: flex;
+flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+justify-content: space-between; /* Space between title and nav */
+align-items: center; /* Center vertically */
+background-color: #2c3e50; /* Background color */
+padding: 10px 20px; /* Padding for the header */
+}
+
+.title-container {
+flex: 1; /* Allow title to take available space */
+text-align: left;
+}
+
+.nav-container {
+flex: 1; /* Allow nav to take available space */
+text-align: right; /* Align navigation to the right */
+}
+
+.nav-container nav ul {
+display: flex; /* Use flexbox for the nav items */
+list-style-type: none; /* Remove bullets */
+padding: 0; /* Remove padding */
+margin: 0; /* Remove margin */
+}
+
+.nav-container nav ul li {
+margin: 0 15px; /* Space between nav items */
+}
+
+.nav-container nav ul li a {
+color: white; /* Link color */
+text-decoration: none; /* Remove underline */
+font-weight: bold; /* Bold links */
+}
+
+.nav-container nav ul li a:hover {
+color: #f39c12; /* Hover color */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+.header-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the left */
+}
+
+.nav-container {
+    text-align: left; /* Align navigation to the left on smaller screens */
+    width: 100%; /* Full width for nav */
+}
+
+.nav-container nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    width: 100%; /* Full width for nav items */
+}
+
+.nav-container nav ul li {
+    margin: 10px 0; /* Space between nav items vertically */
+}
+}
+
+/* Hero Section */
+#home {
+background: url('your-image.jpg') no-repeat center center/cover;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+text-align: center;
+padding: 60px 20px; /* Add top and bottom padding for space */
+flex-direction: column; /* Stack content vertically by default */
+}
+
+#home .content {
+display: flex;
+flex-direction: column; /* Stack on small screens */
+align-items: center;    /* Center items */
+text-align: center;     /* Center text */
+}
+
+#home h1 {
+font-size: 1.5rem;
+margin-bottom: 10px;
+color: #f39c12;
+}
+
+#home p {
+font-size: 2rem;
+color: black;
+font-weight: bolder;
+}
+
+#home img {
+max-width: 100%; /* Allow the image to take the full width of its container */
+height: auto;    /* Maintain aspect ratio */
+border-radius: 50%;
+width: 450px;    /* Set a fixed width for the image */
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+#home .content {
+    flex-direction: row; /* Arrange items in a row on larger screens */
+    text-align: left;    /* Align text left for larger screens */
+}
+
+#home img {
+    max-width: 400px; /* Set max width for the image */
+    margin-left: 20px; /* Add space between text and image */
+}
+
+#home h1 {
+    font-size: 4rem; /* Increase font size on larger screens */
+}
+
+#home p {
+    font-size: 2rem; /* Increase paragraph size on larger screens */
+}
+}
+
+.button-container {
+margin-top: 20px; /* Space above the buttons */
+}
+
+#nameDisplay{
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.btn-hire, .btn-download {
+display: inline-block;
+padding: 10px 20px; /* Padding for buttons */
+margin: 5px; /* Space between buttons */
+color: white; /* Text color */
+background-color: #f39c12; /* Button color */
+text-decoration: none; /* Remove underline */
+border-radius: 5px; /* Rounded corners */
+transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn-hire:hover, .btn-download:hover {
+background-color: #e67e22; /* Darker orange on hover */
+}
+
+
+/* About Section */
+#about {
+    padding: 2rem;
+    background-color: #34496e; /* Darker blue-grey */
+    text-align: center;
+    color: #ecf0f1; /* Light grey text */
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f39c12; /* Bright orange */
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.5;
+    color: #ecf0f1;
+}
+
+/* Projects Section */
+#projects {
+    padding: 2rem;
+    background-color: #34497e; /* Dark blue-grey */
+    text-align: center;
+    color: #ecf0f1;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f39c12; /* Bright orange */
+}
+
+.project {
+display: inline-block;
+margin: 1rem;
+width: 300px;
+padding: 20px; /* Added padding for project boxes */
+border: 1px solid #ccc; /* Border for visibility */
+border-radius: 5px;
+background-color: #2c3e50; /* Dark background for project boxes */
+transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+.project:hover {
+    background-color: #34495e; /* Lighter background on hover */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+
+.project img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.project h3 {
+    margin-top: 10px;
+    color: #f39c12; /* Project titles in orange */
+}
+
+.project p {
+    font-size: 1rem;
+    color: #ecf0f1;
+}
+
+/* Services Section */
+#services {
+    padding: 2rem;
+    background-color: #34498e; /* Darker section background */
+    text-align: center;
+    color: #ecf0f1; /* Light text color */
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f39c12; /* Bright orange for heading */
+}
+
+.service {
+display: inline-block;
+margin: 1rem;
+width: 350px; /* Increased width */
+padding: 20px; /* Added padding */
+border: 1px solid #ccc; /* Border for visibility */
+border-radius: 5px;
+background-color: #34495e; /* Background color for service boxes */
+transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+.service:hover {
+background-color: #2c3e50; /* Darker background on hover */
+transform: translateY(-5px); /* Lift effect */
+}
+
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f39c12;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #ecf0f1;
+}
+
+/* Contact Section */
+#contact {
+    padding: 2rem;
+    background-color: #34499e; /* Darker blue-grey */
+    text-align: center;
+    color: #ecf0f1;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f39c12; /* Bright orange */
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #2c3e50; /* Dark input background */
+    color: #ecf0f1; /* Light text in inputs */
+}
+
+form button {
+    display: block;
+    width: auto; /* Change to auto or set a specific width like 80% */
+    padding: 10px; /* Keep reduced padding */
+    font-size: 1rem; /* Slightly smaller font size */
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto; /* Center the button */
+}
+
+form button:hover {
+    background-color: #e67e22; /* Slightly darker orange on hover */
+}
+
+
+/* Footer */
+footer {
+    background-color: #2c3e60; /* Dark blue-grey */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home p {
+        font-size: 1.2rem;
+    }
+
+    #home .content {
+        flex-direction: column; /* Stacks text and image vertically on small screens */
+    }
+
+    #home img {
+        width: 300px; /* Reduce image size on smaller screens */
+        height: 300px;
+    }
+
+    .project {
+        width: 90%;
+    }
+
+    .service {
+        width: 90%;
+    }
+
+    form input, form textarea {
+        font-size: 1rem;
+    }
+}
